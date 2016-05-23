@@ -9,6 +9,10 @@
 import UIKit
 
 class StartingVC: UIViewController {
+
+    var photosVC: UIViewController!
+    var myPlaceVC: UIViewController!
+    
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -23,11 +27,16 @@ class StartingVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        photosVC = UIViewController(nibName: "Photos", bundle: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showMyPlace(sender: AnyObject){
+        presentViewController(myPlaceVC, animated: true, completion: nil)
     }
     
     
