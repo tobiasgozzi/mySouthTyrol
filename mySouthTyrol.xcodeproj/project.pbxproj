@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1D7164331CF24C150013DFC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7164321CF24C150013DFC5 /* AppDelegate.swift */; };
-		1D7164351CF24C150013DFC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7164341CF24C150013DFC5 /* ViewController.swift */; };
-		1D7164381CF24C150013DFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7164361CF24C150013DFC5 /* Main.storyboard */; };
 		1D71643A1CF24C150013DFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7164391CF24C150013DFC5 /* Assets.xcassets */; };
 		1D71643D1CF24C150013DFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D71643B1CF24C150013DFC5 /* LaunchScreen.storyboard */; };
+		1D71644C1CF24E0C0013DFC5 /* StartingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71644A1CF24E0C0013DFC5 /* StartingVC.swift */; };
+		1D71644D1CF24E0C0013DFC5 /* StartingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D71644B1CF24E0C0013DFC5 /* StartingVC.xib */; };
+		1DD6D2161CF25150000F1596 /* MyPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD6D2141CF25150000F1596 /* MyPlace.swift */; };
+		1DD6D2171CF25150000F1596 /* MyPlace.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD6D2151CF25150000F1596 /* MyPlace.xib */; };
+		1DD6D2191CF25169000F1596 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD6D2181CF25169000F1596 /* Photos.swift */; };
+		1DD6D21B1CF25183000F1596 /* Photos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD6D21A1CF25183000F1596 /* Photos.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D71642F1CF24C150013DFC5 /* mySouthTyrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySouthTyrol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7164321CF24C150013DFC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D7164341CF24C150013DFC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D7164371CF24C150013DFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D7164391CF24C150013DFC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D71643C1CF24C150013DFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D71643E1CF24C150013DFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D71644A1CF24E0C0013DFC5 /* StartingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingVC.swift; sourceTree = "<group>"; };
+		1D71644B1CF24E0C0013DFC5 /* StartingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartingVC.xib; sourceTree = "<group>"; };
+		1DD6D2141CF25150000F1596 /* MyPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlace.swift; sourceTree = "<group>"; };
+		1DD6D2151CF25150000F1596 /* MyPlace.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlace.xib; sourceTree = "<group>"; };
+		1DD6D2181CF25169000F1596 /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		1DD6D21A1CF25183000F1596 /* Photos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Photos.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				1D7164321CF24C150013DFC5 /* AppDelegate.swift */,
-				1D7164341CF24C150013DFC5 /* ViewController.swift */,
-				1D7164361CF24C150013DFC5 /* Main.storyboard */,
+				1D7164451CF24C690013DFC5 /* View */,
+				1D7164441CF24C550013DFC5 /* Controller */,
 				1D7164391CF24C150013DFC5 /* Assets.xcassets */,
 				1D71643B1CF24C150013DFC5 /* LaunchScreen.storyboard */,
 				1D71643E1CF24C150013DFC5 /* Info.plist */,
 			);
 			path = mySouthTyrol;
+			sourceTree = "<group>";
+		};
+		1D7164441CF24C550013DFC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D71644A1CF24E0C0013DFC5 /* StartingVC.swift */,
+				1DD6D2141CF25150000F1596 /* MyPlace.swift */,
+				1DD6D2181CF25169000F1596 /* Photos.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1D7164451CF24C690013DFC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D71644B1CF24E0C0013DFC5 /* StartingVC.xib */,
+				1DD6D2151CF25150000F1596 /* MyPlace.xib */,
+				1DD6D21A1CF25183000F1596 /* Photos.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +152,9 @@
 			files = (
 				1D71643D1CF24C150013DFC5 /* LaunchScreen.storyboard in Resources */,
 				1D71643A1CF24C150013DFC5 /* Assets.xcassets in Resources */,
-				1D7164381CF24C150013DFC5 /* Main.storyboard in Resources */,
+				1D71644D1CF24E0C0013DFC5 /* StartingVC.xib in Resources */,
+				1DD6D2171CF25150000F1596 /* MyPlace.xib in Resources */,
+				1DD6D21B1CF25183000F1596 /* Photos.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +165,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7164351CF24C150013DFC5 /* ViewController.swift in Sources */,
+				1DD6D2191CF25169000F1596 /* Photos.swift in Sources */,
+				1D71644C1CF24E0C0013DFC5 /* StartingVC.swift in Sources */,
 				1D7164331CF24C150013DFC5 /* AppDelegate.swift in Sources */,
+				1DD6D2161CF25150000F1596 /* MyPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1D7164361CF24C150013DFC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D7164371CF24C150013DFC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D71643B1CF24C150013DFC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +310,7 @@
 				1D7164431CF24C150013DFC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
