@@ -13,6 +13,9 @@ class StartingVC: UIViewController {
     var photosVC: UIViewController!
     var myPlaceVC: UIViewController!
     
+    @IBOutlet weak var exploreBtn: UIButton!
+    @IBOutlet weak var imagesBtn: UIButton!
+    @IBOutlet weak var placeBtn: UIButton!
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -28,6 +31,7 @@ class StartingVC: UIViewController {
 
         // Do any additional setup after loading the view.
         photosVC = UIViewController(nibName: "Photos", bundle: nil)
+        myPlaceVC = UIViewController(nibName: "MyPlace", bundle: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,10 +39,18 @@ class StartingVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func showMoreBtns(sender: AnyObject) {
+        exploreBtn.alpha = 0.5
+        placeBtn.hidden = false
+        imagesBtn.hidden = false
+    }
+    
     @IBAction func showMyPlace(sender: AnyObject){
         presentViewController(myPlaceVC, animated: true, completion: nil)
     }
-    
+    @IBAction func showPhotos(sender: AnyObject){
+        presentViewController(myPlaceVC, animated: true, completion: nil)
+    }
     
 
 }

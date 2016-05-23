@@ -10,19 +10,16 @@ import UIKit
 
 class mainButton: UIButton {
 
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 15
+        self.layer.shadowOffset = CGSize(width: 1, height: 1)
         
+        self.layer.timeOffset = CFTimeInterval(3.4)
+        
+        self.backgroundColor = UIColor(colorLiteralRed: 13/255, green: 56/255, blue: 129/255, alpha: 1)
+        self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.setTitleColor(UIColor.greenColor(), forState: .Highlighted)
+        self.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
 
     }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    private func setProperties(){
-        self.layer.cornerRadius = 15
-    }
-    
 }

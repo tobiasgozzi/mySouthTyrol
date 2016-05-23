@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartingVC" customModule="mySouthTyrol" customModuleProvider="target">
             <connections>
+                <outlet property="exploreBtn" destination="IZW-tg-I9T" id="rcM-Jh-wGv"/>
+                <outlet property="imagesBtn" destination="ueH-Yl-abb" id="h1T-m3-Af5"/>
+                <outlet property="placeBtn" destination="MzV-lc-1zl" id="iCt-C4-vki"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="mPO-UT-xx5"/>
             </connections>
         </placeholder>
@@ -18,35 +21,99 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2H5A6782-1829x1030" translatesAutoresizingMaskIntoConstraints="NO" id="nze-3k-Mo2">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="South Tyrol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thZ-VE-7tn">
-                    <rect key="frame" x="22" y="25" width="332" height="86"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
-                    <color key="textColor" red="0.97257023303715895" green="1" blue="0.97160860613112143" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="23" y="24" width="321" height="81"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover breathtaking nature and heartwarming people." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVt-JS-g8v">
-                    <rect key="frame" x="22" y="106" width="314" height="71"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="23" y="107" width="321" height="57"/>
-                    </variation>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-Jj-LCY">
+                    <rect key="frame" x="22" y="25" width="321" height="172"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-hq-5nD">
+                            <rect key="frame" x="0.0" y="0.0" width="219" height="27"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" translatesAutoresizingMaskIntoConstraints="NO" id="YNA-Zj-drV">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="27" id="LdF-Wi-PKU"/>
+                                        <constraint firstAttribute="width" constant="30" id="bjE-mJ-a5B"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places around the world." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAg-P9-zZ5">
+                                    <rect key="frame" x="36" y="0.0" width="183" height="27"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Tyrol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thZ-VE-7tn">
+                            <rect key="frame" x="0.0" y="37" width="321" height="72"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
+                            <color key="textColor" red="0.97257023303715895" green="1" blue="0.97160860613112143" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover breathtaking nature and heartwarming people." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVt-JS-g8v">
+                            <rect key="frame" x="0.0" y="119" width="314" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="314" id="URs-7p-7LM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-tg-I9T" customClass="mainButton" customModule="mySouthTyrol" customModuleProvider="target">
+                    <rect key="frame" x="209" y="538" width="183" height="30"/>
+                    <color key="backgroundColor" red="0.042505095394058882" green="0.24602595300668378" blue="0.50336680974745918" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="D7w-Kj-bXw"/>
+                        <constraint firstAttribute="width" constant="183" id="Ddf-Vl-Auu"/>
+                    </constraints>
+                    <state key="normal" title="Explore"/>
+                    <connections>
+                        <action selector="showMoreBtns:" destination="-1" eventType="touchUpInside" id="tHq-tY-GoU"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-lc-1zl" customClass="mainButton" customModule="mySouthTyrol" customModuleProvider="target">
+                    <rect key="frame" x="167" y="477" width="115" height="30"/>
+                    <color key="backgroundColor" red="0.042505095389999997" green="0.24602595299999999" blue="0.50336680970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="1Ga-Kf-5TF"/>
+                        <constraint firstAttribute="height" constant="30" id="oV5-cg-aqP"/>
+                    </constraints>
+                    <state key="normal" title="Place"/>
+                    <connections>
+                        <action selector="showMyPlace:" destination="-1" eventType="touchUpInside" id="gvZ-pM-4RI"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueH-Yl-abb" customClass="mainButton" customModule="mySouthTyrol" customModuleProvider="target">
+                    <rect key="frame" x="319" y="477" width="115" height="30"/>
+                    <color key="backgroundColor" red="0.042505095389999997" green="0.24602595299999999" blue="0.50336680970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="FxU-ag-Rt9"/>
+                        <constraint firstAttribute="width" constant="115" id="gEs-IX-AAo"/>
+                    </constraints>
+                    <state key="normal" title="Images"/>
+                    <connections>
+                        <action selector="showPhotos:" destination="-1" eventType="touchUpInside" id="wFd-an-Umn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="uXg-Jj-LCY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="7Ic-7B-bZq"/>
                 <constraint firstAttribute="bottom" secondItem="nze-3k-Mo2" secondAttribute="bottom" id="CvM-uE-XJ3"/>
+                <constraint firstItem="uXg-Jj-LCY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="Dnk-qL-075"/>
+                <constraint firstItem="IZW-tg-I9T" firstAttribute="centerX" secondItem="MzV-lc-1zl" secondAttribute="centerX" constant="76" id="DrT-O1-KVk"/>
+                <constraint firstItem="ueH-Yl-abb" firstAttribute="centerY" secondItem="MzV-lc-1zl" secondAttribute="centerY" id="NGv-9Z-VgP"/>
                 <constraint firstAttribute="bottom" secondItem="nze-3k-Mo2" secondAttribute="bottom" id="NOY-vG-uuC"/>
+                <constraint firstAttribute="bottom" secondItem="IZW-tg-I9T" secondAttribute="bottom" constant="32" id="bFJ-Zl-bnQ"/>
                 <constraint firstAttribute="trailing" secondItem="nze-3k-Mo2" secondAttribute="trailing" id="cdY-ng-h8L"/>
                 <constraint firstItem="nze-3k-Mo2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mSV-iO-ko7"/>
                 <constraint firstItem="nze-3k-Mo2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r7c-kV-GfT"/>
                 <constraint firstItem="nze-3k-Mo2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rTV-fW-mjr"/>
+                <constraint firstItem="IZW-tg-I9T" firstAttribute="top" secondItem="MzV-lc-1zl" secondAttribute="bottom" constant="31" id="rcv-uW-qOt"/>
                 <constraint firstItem="nze-3k-Mo2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uRd-aP-wGS"/>
+                <constraint firstItem="IZW-tg-I9T" firstAttribute="centerX" secondItem="ueH-Yl-abb" secondAttribute="centerX" constant="-76" id="vpL-TW-Kq3"/>
                 <constraint firstAttribute="trailing" secondItem="nze-3k-Mo2" secondAttribute="trailing" id="wxB-Il-vXZ"/>
+                <constraint firstItem="IZW-tg-I9T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z9c-jp-RWf"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
@@ -59,8 +126,6 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="nze-3k-Mo2"/>
-                    <include reference="thZ-VE-7tn"/>
-                    <include reference="OVt-JS-g8v"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="NOY-vG-uuC"/>
@@ -87,5 +152,6 @@
     </objects>
     <resources>
         <image name="2H5A6782-1829x1030" width="1829" height="1030"/>
+        <image name="globe" width="82" height="94"/>
     </resources>
 </document>
