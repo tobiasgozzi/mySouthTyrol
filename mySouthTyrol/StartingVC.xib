@@ -91,9 +91,6 @@
                         <constraint firstAttribute="width" constant="115" id="gEs-IX-AAo"/>
                     </constraints>
                     <state key="normal" title="Images"/>
-                    <connections>
-                        <action selector="showPhotos:" destination="-1" eventType="touchUpInside" id="wFd-an-Umn"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

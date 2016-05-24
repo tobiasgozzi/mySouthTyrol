@@ -10,8 +10,8 @@ import UIKit
 
 class StartingVC: UIViewController {
 
-    var photosVC: UIViewController!
-    var myPlaceVC: UIViewController!
+    var photosVC: Photos!
+    var myPlaceVC: MyPlace!
     
     @IBOutlet weak var exploreBtn: UIButton!
     @IBOutlet weak var imagesBtn: UIButton!
@@ -30,8 +30,7 @@ class StartingVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        photosVC = UIViewController(nibName: "Photos", bundle: nil)
-        myPlaceVC = UIViewController(nibName: "MyPlace", bundle: nil)
+        photosVC = Photos(nibName: "Photos", bundle: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +45,7 @@ class StartingVC: UIViewController {
     }
     
     @IBAction func showMyPlace(sender: AnyObject){
+        myPlaceVC = MyPlace(nibName: "MyPlace", bundle: nil)
         presentViewController(myPlaceVC, animated: true, completion: nil)
     }
     @IBAction func showPhotos(sender: AnyObject){
